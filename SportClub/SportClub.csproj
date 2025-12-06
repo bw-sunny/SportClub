@@ -160,8 +160,14 @@
     <EmbeddedResource Include="AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminTrainerCreateForm.resx">
+      <DependentUpon>AdminTrainerCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminTrainerForm.resx">
       <DependentUpon>AdminTrainerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminTrainersEditForm.resx">
+      <DependentUpon>AdminTrainersEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ClientForm.resx">
       <DependentUpon>ClientForm.cs</DependentUpon>

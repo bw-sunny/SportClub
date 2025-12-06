@@ -93,11 +93,12 @@
 			// 
 			this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
 			this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.button6.Location = new System.Drawing.Point(782, 120);
+			this.button6.Location = new System.Drawing.Point(782, 131);
 			this.button6.Name = "button6";
 			this.button6.Size = new System.Drawing.Size(40, 36);
 			this.button6.TabIndex = 12;
 			this.button6.UseVisualStyleBackColor = true;
+			this.button6.Click += new System.EventHandler(this.button6_Click);
 			// 
 			// button4
 			// 
