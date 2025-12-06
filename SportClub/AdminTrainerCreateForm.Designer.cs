@@ -1,6 +1,6 @@
 ﻿namespace SportClub
 {
-    partial class AdminClientsDeleteForm
+    partial class AdminTrainerCreateForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-			this.SuspendLayout();
-			// 
-			// AdminClientsDeleteForm
-			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(511, 399);
-			this.Name = "AdminClientsDeleteForm";
-			this.Text = "Удаление клиента";
-			this.ResumeLayout(false);
-
+            this.components = new System.ComponentModel.Container();
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "AdminTrainerCreateForm";
         }
 
         #endregion

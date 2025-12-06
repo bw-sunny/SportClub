@@ -49,7 +49,6 @@ namespace SportClub
 						if (rowsAffected > 0)
 						{
 							MessageBox.Show($"Данные клиента успешно изменены!");
-							this.клиентыTableAdapter1.Fill(this.fitnessClubDataSet.Клиенты);
 							this.Close();
 							
 						}

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SportClub
 {
-    public partial class AdminClientsDeleteForm : Form
+    public partial class AdminTrainersEditForm : Form
     {
-        public AdminClientsDeleteForm()
+        public AdminTrainersEditForm()
         {
             InitializeComponent();
         }

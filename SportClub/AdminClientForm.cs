@@ -85,8 +85,7 @@ namespace SportClub
 			}
 
 			// 3. Формируем сообщение с информацией о клиенте
-			string message = $"Вы действительно хотите удалить клиента?\n\n" +
-							$"ФИО: {clientFIO}\n";
+			string message = $"Вы действительно хотите удалить клиента?\n\n";
 
 			// 4. Показываем окно подтверждения
 			DialogResult result = MessageBox.Show(
@@ -136,26 +135,24 @@ namespace SportClub
 					}
 				}
 				catch (SqlException ex)
-
 				{
-
-					// 9. Обработка ошибки от триггера (если есть активные абонементы)
-					if (ex.Message.Contains("Нельзя удалить клиентов с активными абонементами"))
+					if (ex.Message.Contains("Нельзя удалить клиента") ||
+						ex.Message.Contains("активные абонементы") ||
+						ex.Message.Contains("ОШИБКА:"))
 					{
+						// Показываем сообщение от триггера как есть
 						MessageBox.Show(
-							"Невозможно удалить клиента!\n\n" +
-							"У клиента есть активные абонементы.\n" +
-							"Сначала удалите или деактивируйте абонементы.",
+							$"{ex.Message}\n\n" +
+							$"Клиент: {clientFIO}\n",
 							"Ошибка удаления",
 							MessageBoxButtons.OK,
 							MessageBoxIcon.Error);
 					}
-					else if (ex.Message.Contains("DELETE statement conflicted"))
+					else if (ex.Number == 547) // Ошибка внешнего ключа
 					{
 						MessageBox.Show(
-							"Невозможно удалить клиента!\n\n" +
-							"Есть связанные записи в других таблицах.",
-							"Ошибка удаления",
+							"Ошибка удаления! Есть связанные записи в других таблицах.",
+							"Ошибка целостности данных",
 							MessageBoxButtons.OK,
 							MessageBoxIcon.Error);
 					}
@@ -176,5 +173,12 @@ namespace SportClub
 				}
 			}
 		}
-	}
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+			клиентыTableAdapter1.Fill(fitnessClubDataSet.Клиенты);
+
+			dataGridView1.ClearSelection();
+		}
+    }
 }

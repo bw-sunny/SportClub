@@ -73,12 +73,6 @@
     <Compile Include="AdminClientsCreateForm.Designer.cs">
       <DependentUpon>AdminClientsCreateForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminClientsDeleteForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AdminClientsDeleteForm.Designer.cs">
-      <DependentUpon>AdminClientsDeleteForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="AdminClientsEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,11 +85,34 @@
     <Compile Include="AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminTrainerCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminTrainerCreateForm.Designer.cs">
+      <DependentUpon>AdminTrainerCreateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminTrainerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminTrainerForm.Designer.cs">
+      <DependentUpon>AdminTrainerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminTrainersEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminTrainersEditForm.Designer.cs">
+      <DependentUpon>AdminTrainersEditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClientForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ClientForm.Designer.cs">
       <DependentUpon>ClientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dataGridViewTrainers.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dataGridViewTrainers.xsd</DependentUpon>
     </Compile>
     <Compile Include="FitnessClubClients.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -106,6 +123,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FitnessClubDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FitnessClubDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FitnessClubDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="FitnessClubFullClients.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -132,14 +154,14 @@
     <EmbeddedResource Include="AdminClientsCreateForm.resx">
       <DependentUpon>AdminClientsCreateForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminClientsDeleteForm.resx">
-      <DependentUpon>AdminClientsDeleteForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AdminClientsEditForm.resx">
       <DependentUpon>AdminClientsEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminTrainerForm.resx">
+      <DependentUpon>AdminTrainerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ClientForm.resx">
       <DependentUpon>ClientForm.cs</DependentUpon>
@@ -159,6 +181,17 @@
     <EmbeddedResource Include="ТrainerForm.resx">
       <DependentUpon>ТrainerForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="dataGridViewTrainers.xsc">
+      <DependentUpon>dataGridViewTrainers.xsd</DependentUpon>
+    </None>
+    <None Include="dataGridViewTrainers.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dataGridViewTrainers.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dataGridViewTrainers.xss">
+      <DependentUpon>dataGridViewTrainers.xsd</DependentUpon>
+    </None>
     <None Include="FitnessClubClients.xsc">
       <DependentUpon>FitnessClubClients.xsd</DependentUpon>
     </None>
@@ -180,6 +213,17 @@
     </None>
     <None Include="FitnessClubDataSet.xss">
       <DependentUpon>FitnessClubDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FitnessClubDataSet1.xsc">
+      <DependentUpon>FitnessClubDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="FitnessClubDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FitnessClubDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FitnessClubDataSet1.xss">
+      <DependentUpon>FitnessClubDataSet1.xsd</DependentUpon>
     </None>
     <None Include="FitnessClubFullClients.xsc">
       <DependentUpon>FitnessClubFullClients.xsd</DependentUpon>
