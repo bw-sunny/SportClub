@@ -73,6 +73,12 @@
     <Compile Include="AdminClientsCreateForm.Designer.cs">
       <DependentUpon>AdminClientsCreateForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminClientsDeleteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminClientsDeleteForm.Designer.cs">
+      <DependentUpon>AdminClientsDeleteForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminClientsEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminClientsCreateForm.resx">
       <DependentUpon>AdminClientsCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminClientsDeleteForm.resx">
+      <DependentUpon>AdminClientsDeleteForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminClientsEditForm.resx">
       <DependentUpon>AdminClientsEditForm.cs</DependentUpon>

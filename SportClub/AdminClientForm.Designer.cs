@@ -35,24 +35,24 @@
 			this.button3 = new System.Windows.Forms.Button();
 			this.button4 = new System.Windows.Forms.Button();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
+			this.iDКлиентаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.фИОDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.номертелефонаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.датарожденияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.клиентыBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+			this.fitnessClubDataSet = new SportClub.FitnessClubDataSet();
 			this.клиентыBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.fitnessClubClients = new SportClub.FitnessClubClients();
 			this.клиентыTableAdapter = new SportClub.FitnessClubClientsTableAdapters.КлиентыTableAdapter();
 			this.label2 = new System.Windows.Forms.Label();
 			this.fitnessClubClientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.fitnessClubDataSet = new SportClub.FitnessClubDataSet();
-			this.клиентыBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
 			this.клиентыTableAdapter1 = new SportClub.FitnessClubDataSetTableAdapters.КлиентыTableAdapter();
-			this.iDКлиентаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.фИОDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.номертелефонаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.датарожденияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.клиентыBindingSource1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.fitnessClubDataSet)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.клиентыBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.fitnessClubClients)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.fitnessClubClientsBindingSource)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.fitnessClubDataSet)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.клиентыBindingSource1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// button1
@@ -74,6 +74,7 @@
 			this.button2.TabIndex = 1;
 			this.button2.Text = "Удалить";
 			this.button2.UseVisualStyleBackColor = false;
+			this.button2.Click += new System.EventHandler(this.button2_Click);
 			// 
 			// label1
 			// 
@@ -125,6 +126,52 @@
 			this.dataGridView1.Size = new System.Drawing.Size(699, 263);
 			this.dataGridView1.TabIndex = 7;
 			// 
+			// iDКлиентаDataGridViewTextBoxColumn
+			// 
+			this.iDКлиентаDataGridViewTextBoxColumn.DataPropertyName = "ID_Клиента";
+			this.iDКлиентаDataGridViewTextBoxColumn.HeaderText = "ID";
+			this.iDКлиентаDataGridViewTextBoxColumn.MinimumWidth = 6;
+			this.iDКлиентаDataGridViewTextBoxColumn.Name = "iDКлиентаDataGridViewTextBoxColumn";
+			this.iDКлиентаDataGridViewTextBoxColumn.ReadOnly = true;
+			this.iDКлиентаDataGridViewTextBoxColumn.Width = 50;
+			// 
+			// фИОDataGridViewTextBoxColumn
+			// 
+			this.фИОDataGridViewTextBoxColumn.DataPropertyName = "ФИО";
+			this.фИОDataGridViewTextBoxColumn.HeaderText = "ФИО";
+			this.фИОDataGridViewTextBoxColumn.MinimumWidth = 6;
+			this.фИОDataGridViewTextBoxColumn.Name = "фИОDataGridViewTextBoxColumn";
+			this.фИОDataGridViewTextBoxColumn.ReadOnly = true;
+			this.фИОDataGridViewTextBoxColumn.Width = 200;
+			// 
+			// номертелефонаDataGridViewTextBoxColumn
+			// 
+			this.номертелефонаDataGridViewTextBoxColumn.DataPropertyName = "Номер_телефона";
+			this.номертелефонаDataGridViewTextBoxColumn.HeaderText = "Номер телефона";
+			this.номертелефонаDataGridViewTextBoxColumn.MinimumWidth = 6;
+			this.номертелефонаDataGridViewTextBoxColumn.Name = "номертелефонаDataGridViewTextBoxColumn";
+			this.номертелефонаDataGridViewTextBoxColumn.ReadOnly = true;
+			this.номертелефонаDataGridViewTextBoxColumn.Width = 125;
+			// 
+			// датарожденияDataGridViewTextBoxColumn
+			// 
+			this.датарожденияDataGridViewTextBoxColumn.DataPropertyName = "Дата_рождения";
+			this.датарожденияDataGridViewTextBoxColumn.HeaderText = "Дата рождения";
+			this.датарожденияDataGridViewTextBoxColumn.MinimumWidth = 6;
+			this.датарожденияDataGridViewTextBoxColumn.Name = "датарожденияDataGridViewTextBoxColumn";
+			this.датарожденияDataGridViewTextBoxColumn.ReadOnly = true;
+			this.датарожденияDataGridViewTextBoxColumn.Width = 125;
+			// 
+			// клиентыBindingSource1
+			// 
+			this.клиентыBindingSource1.DataMember = "Клиенты";
+			this.клиентыBindingSource1.DataSource = this.fitnessClubDataSet;
+			// 
+			// fitnessClubDataSet
+			// 
+			this.fitnessClubDataSet.DataSetName = "FitnessClubDataSet";
+			this.fitnessClubDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+			// 
 			// клиентыBindingSource
 			// 
 			this.клиентыBindingSource.DataMember = "Клиенты";
@@ -153,53 +200,9 @@
 			this.fitnessClubClientsBindingSource.DataSource = this.fitnessClubClients;
 			this.fitnessClubClientsBindingSource.Position = 0;
 			// 
-			// fitnessClubDataSet
-			// 
-			this.fitnessClubDataSet.DataSetName = "FitnessClubDataSet";
-			this.fitnessClubDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-			// 
-			// клиентыBindingSource1
-			// 
-			this.клиентыBindingSource1.DataMember = "Клиенты";
-			this.клиентыBindingSource1.DataSource = this.fitnessClubDataSet;
-			// 
 			// клиентыTableAdapter1
 			// 
 			this.клиентыTableAdapter1.ClearBeforeFill = true;
-			// 
-			// iDКлиентаDataGridViewTextBoxColumn
-			// 
-			this.iDКлиентаDataGridViewTextBoxColumn.DataPropertyName = "ID_Клиента";
-			this.iDКлиентаDataGridViewTextBoxColumn.HeaderText = "ID";
-			this.iDКлиентаDataGridViewTextBoxColumn.MinimumWidth = 6;
-			this.iDКлиентаDataGridViewTextBoxColumn.Name = "iDКлиентаDataGridViewTextBoxColumn";
-			this.iDКлиентаDataGridViewTextBoxColumn.ReadOnly = true;
-			this.iDКлиентаDataGridViewTextBoxColumn.Width = 50;
-			// 
-			// фИОDataGridViewTextBoxColumn
-			// 
-			this.фИОDataGridViewTextBoxColumn.DataPropertyName = "ФИО";
-			this.фИОDataGridViewTextBoxColumn.HeaderText = "ФИО";
-			this.фИОDataGridViewTextBoxColumn.MinimumWidth = 6;
-			this.фИОDataGridViewTextBoxColumn.Name = "фИОDataGridViewTextBoxColumn";
-			this.фИОDataGridViewTextBoxColumn.ReadOnly = true;
-			this.фИОDataGridViewTextBoxColumn.Width = 200;
-			// 
-			// номертелефонаDataGridViewTextBoxColumn
-			// 
-			this.номертелефонаDataGridViewTextBoxColumn.DataPropertyName = "Номер_телефона";
-			this.номертелефонаDataGridViewTextBoxColumn.HeaderText = "Номер телефона";
-			this.номертелефонаDataGridViewTextBoxColumn.MinimumWidth = 6;
-			this.номертелефонаDataGridViewTextBoxColumn.Name = "номертелефонаDataGridViewTextBoxColumn";
-			this.номертелефонаDataGridViewTextBoxColumn.ReadOnly = true;
-			// 
-			// датарожденияDataGridViewTextBoxColumn
-			// 
-			this.датарожденияDataGridViewTextBoxColumn.DataPropertyName = "Дата_рождения";
-			this.датарожденияDataGridViewTextBoxColumn.HeaderText = "Дата рождения";
-			this.датарожденияDataGridViewTextBoxColumn.MinimumWidth = 6;
-			this.датарожденияDataGridViewTextBoxColumn.Name = "датарожденияDataGridViewTextBoxColumn";
-			this.датарожденияDataGridViewTextBoxColumn.ReadOnly = true;
 			// 
 			// AdminClientForm
 			// 
@@ -217,11 +220,11 @@
 			this.Text = "Администратор - Клиенты";
 			this.Load += new System.EventHandler(this.AdminClientForm_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.клиентыBindingSource1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.fitnessClubDataSet)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.клиентыBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.fitnessClubClients)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.fitnessClubClientsBindingSource)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.fitnessClubDataSet)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.клиентыBindingSource1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

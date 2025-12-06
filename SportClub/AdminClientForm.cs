@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Drawing;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace SportClub
 {
 	public partial class AdminClientForm : Form
 	{
-		// Переменные для хранения выбранного клиента
+
+		private string connectionString = @"Data Source=DESKTOP-PGUAQQC\SQLEXPRESS;Initial Catalog=FitnessClub;Integrated Security=True";
 		public AdminClientForm()
 		{
 			InitializeComponent();
@@ -36,6 +38,143 @@ namespace SportClub
 			// TODO: данная строка кода позволяет загрузить данные в таблицу "fitnessClubDataSet.Клиенты". При необходимости она может быть перемещена или удалена.
 			this.клиентыTableAdapter1.Fill(this.fitnessClubDataSet.Клиенты);
 
+		}
+
+		private void button2_Click(object sender, EventArgs e) //Кнопка удалить
+		{
+			// 1. Проверяем, выбрана ли строка в DataGridView
+			if (dataGridView1.SelectedRows.Count == 0)
+			{
+				MessageBox.Show("Пожалуйста, выберите клиента для удаления",
+					"Не выбран клиент",
+					MessageBoxButtons.OK,
+					MessageBoxIcon.Warning);
+				return;
+			}
+
+			// 2. Получаем данные выбранного клиента с ПРАВИЛЬНЫМИ именами столбцов
+			DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+
+			int clientId = 0;
+			string clientFIO = "";
+			string clientPhone = "";
+			string clientBirthDate = "";
+
+			try
+			{
+				// Используем правильные имена столбцов
+				clientId = Convert.ToInt32(selectedRow.Cells["IDКлиентаDataGridViewTextBoxColumn"].Value);
+				clientFIO = selectedRow.Cells["ФИОDataGridViewTextBoxColumn"].Value.ToString();
+				clientPhone = selectedRow.Cells["номертелефонаDataGridViewTextBoxColumn"].Value?.ToString() ?? "";
+
+				// Получаем дату рождения
+				if (selectedRow.Cells["датарожденияDataGridViewTextBoxColumn"].Value != null &&
+					selectedRow.Cells["датарожденияDataGridViewTextBoxColumn"].Value != DBNull.Value)
+				{
+					clientBirthDate = Convert.ToDateTime(
+						selectedRow.Cells["датарожденияDataGridViewTextBoxColumn"].Value).ToString("dd.MM.yyyy");
+				}
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show($"Ошибка получения данных клиента:\n{ex.Message}",
+					"Ошибка",
+					MessageBoxButtons.OK,
+					MessageBoxIcon.Error);
+				return;
+			}
+
+			// 3. Формируем сообщение с информацией о клиенте
+			string message = $"Вы действительно хотите удалить клиента?\n\n" +
+							$"ФИО: {clientFIO}\n";
+
+			// 4. Показываем окно подтверждения
+			DialogResult result = MessageBox.Show(
+				message,
+				"Подтверждение удаления",
+				MessageBoxButtons.YesNo,
+				MessageBoxIcon.Warning,
+				MessageBoxDefaultButton.Button2); // По умолчанию выбран "Нет"
+
+			// 5. Если пользователь подтвердил удаление
+			if (result == DialogResult.Yes)
+			{
+				// 6. Выполняем удаление
+				try
+				{
+					using (SqlConnection connection = new SqlConnection(connectionString))
+					{
+						connection.Open();
+
+						// SQL-запрос для удаления клиента
+						string deleteQuery = "DELETE FROM Клиенты WHERE ID_Клиента = @id";
+
+						using (SqlCommand cmd = new SqlCommand(deleteQuery, connection))
+						{
+							cmd.Parameters.AddWithValue("@id", clientId);
+							int rowsAffected = cmd.ExecuteNonQuery();
+
+							if (rowsAffected > 0)
+							{
+								// 7. Успешное удаление
+								MessageBox.Show($"Клиент '{clientFIO}' успешно удален",
+									"Успешно",
+									MessageBoxButtons.OK,
+									MessageBoxIcon.Information);
+
+								// 8. Обновляем таблицу
+								this.клиентыTableAdapter1.Fill(this.fitnessClubDataSet.Клиенты);
+							}
+							else
+							{
+								MessageBox.Show("Клиент не найден в базе данных",
+									"Ошибка",
+									MessageBoxButtons.OK,
+									MessageBoxIcon.Error);
+							}
+						}
+					}
+				}
+				catch (SqlException ex)
+
+				{
+
+					// 9. Обработка ошибки от триггера (если есть активные абонементы)
+					if (ex.Message.Contains("Нельзя удалить клиентов с активными абонементами"))
+					{
+						MessageBox.Show(
+							"Невозможно удалить клиента!\n\n" +
+							"У клиента есть активные абонементы.\n" +
+							"Сначала удалите или деактивируйте абонементы.",
+							"Ошибка удаления",
+							MessageBoxButtons.OK,
+							MessageBoxIcon.Error);
+					}
+					else if (ex.Message.Contains("DELETE statement conflicted"))
+					{
+						MessageBox.Show(
+							"Невозможно удалить клиента!\n\n" +
+							"Есть связанные записи в других таблицах.",
+							"Ошибка удаления",
+							MessageBoxButtons.OK,
+							MessageBoxIcon.Error);
+					}
+					else
+					{
+						MessageBox.Show($"Ошибка базы данных:\n{ex.Message}",
+							"Ошибка",
+							MessageBoxButtons.OK,
+							MessageBoxIcon.Error);
+					}
+				}
+				catch (Exception ex)
+				{
+					MessageBox.Show($"Ошибка:\n{ex.Message}",
+						"Ошибка",
+						MessageBoxButtons.OK,
+						MessageBoxIcon.Error);
+				}
+			}
 		}
 	}
 }
