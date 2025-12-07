@@ -22,5 +22,11 @@ namespace SportClub
             Form AdminSubscriptionsSellingForm = new AdminSubscriptionsSellingForm();
             AdminSubscriptionsSellingForm.Show();
 		}
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+			Form AdminSubscriptionsReturnForm = new AdminSubscriptionsReturnForm();
+			AdminSubscriptionsReturnForm.Show();
+		}
     }
 }

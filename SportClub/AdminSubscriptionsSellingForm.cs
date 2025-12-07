@@ -32,7 +32,7 @@ namespace SportClub
 			textBox1.Focus();
 		}
 
-		// Загрузка списка клиентов
+		// Загрузка списка клиентов для автодополнения
 		private void LoadClients()
 		{
 			try
@@ -52,7 +52,7 @@ namespace SportClub
 							collection.Add(reader["ФИО"].ToString());
 						}
 
-						// Настройка автозаполнения
+						// Настройка автодополнения
 						textBox1.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
 						textBox1.AutoCompleteSource = AutoCompleteSource.CustomSource;
 						textBox1.AutoCompleteCustomSource = collection;
@@ -215,5 +215,5 @@ namespace SportClub
 			}
 			return base.ProcessCmdKey(ref msg, keyData);
 		}
-    }
+	}
 }
