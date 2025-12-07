@@ -134,7 +134,7 @@ namespace SportClub
 				}
 				else
 				{
-					MessageBox.Show(result, "Ошибка",
+					MessageBox.Show(result, "Триггер",
 								  MessageBoxButtons.OK, MessageBoxIcon.Error);
 				}
 			}
@@ -144,7 +144,7 @@ namespace SportClub
 				if (ex.Message.Contains("активные абонементы") ||
 					ex.Message.Contains("дата оформления"))
 				{
-					MessageBox.Show(ex.Message, "Ошибка",
+					MessageBox.Show(ex.Message, "Триггер",
 								  MessageBoxButtons.OK, MessageBoxIcon.Warning);
 				}
 				else
