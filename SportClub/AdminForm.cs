@@ -33,7 +33,9 @@ namespace SportClub
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            Form AdminSubscripitonsForm = new AdminSubscriptionForm();
+            AdminSubscripitonsForm.Show();
+            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
