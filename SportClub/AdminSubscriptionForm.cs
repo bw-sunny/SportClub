@@ -35,5 +35,13 @@ namespace SportClub
             AdminForm.Show();
             this.Close();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form AdminSubscriptionsView = new AdminSubscriptionsViewForm();
+            AdminSubscriptionsView.Show();
+            this.Close();
+
+		}
     }
 }
