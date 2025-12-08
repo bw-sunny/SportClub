@@ -44,5 +44,12 @@ namespace SportClub
 			AdminTrainerForm.Show();
 			this.Close();
 		}
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+			Form AdminTrainingForm = new AdminTrainingForm();
+			AdminTrainingForm.Show();
+			this.Close();
+		}
     }
 }
