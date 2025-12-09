@@ -108,6 +108,7 @@
 			this.label1.Size = new System.Drawing.Size(283, 29);
 			this.label1.TabIndex = 4;
 			this.label1.Text = "Создание тренировки";
+			this.label1.Click += new System.EventHandler(this.label1_Click);
 			// 
 			// label2
 			// 

@@ -127,6 +127,12 @@
     <Compile Include="AdminTrainingCreateForm.Designer.cs">
       <DependentUpon>AdminTrainingCreateForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminTrainingEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminTrainingEditForm.Designer.cs">
+      <DependentUpon>AdminTrainingEditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminTrainingForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -237,6 +243,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminTrainingCreateForm.resx">
       <DependentUpon>AdminTrainingCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminTrainingEditForm.resx">
+      <DependentUpon>AdminTrainingEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminTrainingForm.resx">
       <DependentUpon>AdminTrainingForm.cs</DependentUpon>
