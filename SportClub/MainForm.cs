@@ -17,26 +17,6 @@ namespace SportClub
         {
             InitializeComponent();
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            TestLogin = Login.Text;
-            if (TestLogin == "тренер") {
-				Form ТrainerForm = new ТrainerForm();
-				ТrainerForm.Show();
-				this.Hide();
-			}
-            else
-            {
-				MessageBox.Show("Для входа как тренер введите логин", "Ошибка",
-							  MessageBoxButtons.OK, MessageBoxIcon.Warning);
-				Login.Focus(); 
-				Login.SelectAll();
-			}
-           
-
-		}
-
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -44,20 +24,13 @@ namespace SportClub
 
         private void button1_Click(object sender, EventArgs e)
         {
-			TestLogin = Login.Text;
+            TestLogin = "администратор";
             if (TestLogin == "администратор")
             {
                 Form AdminForm = new AdminForm();
                 AdminForm.Show();
                 this.Hide();
             }
-			else
-			{
-				MessageBox.Show("Для входа как админ введите логин", "Ошибка",
-							  MessageBoxButtons.OK, MessageBoxIcon.Warning);
-				Login.Focus();
-				Login.SelectAll();
-			}
 		}
     }
 }

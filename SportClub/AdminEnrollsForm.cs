@@ -23,5 +23,21 @@ namespace SportClub
             this.вид_Записи_на_занятияTableAdapter.Fill(this.fitnessClubDataSet4.Вид_Записи_на_занятия);
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form AdminEnrollsNew = new AdminEnrollsNew();
+            AdminEnrollsNew.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+			this.вид_Записи_на_занятияTableAdapter.Fill(this.fitnessClubDataSet4.Вид_Записи_на_занятия);
+		}
     }
 }

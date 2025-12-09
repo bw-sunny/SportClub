@@ -22,41 +22,6 @@ namespace SportClub
 			connection = new SqlConnection(@"Data Source=DESKTOP-PGUAQQC\SQLEXPRESS;Initial Catalog=FitnessClub;Integrated Security=True");
 		}
 
-		private void button1_Click(object sender, EventArgs e) // кнопка применить фильтр
-		{
-			ApplyFilters();
-		}
-
-		private void ApplyFilters()
-		{
-			if (scheduleDataView != null)
-			{
-				string filter = "";
-
-				// Фильтр по дате
-				string selectedDate = dateTimePicker1.Value.ToString("dd.MM.yyyy");
-				filter = $"Дата = '{selectedDate}'";
-
-				// Фильтр по тренеру (если введен)
-				if (!string.IsNullOrWhiteSpace(textBox1.Text))
-				{
-					filter += $" AND Тренер LIKE '%{textBox1.Text}%'";
-				}
-
-				scheduleDataView.RowFilter = filter;
-			}
-		}
-
-		private void button2_Click(object sender, EventArgs e) // кнопка сбросить фильтр
-		{
-			textBox1.Text = "";
-			dateTimePicker1.Value = DateTime.Today;
-
-			if (scheduleDataView != null)
-			{
-				scheduleDataView.RowFilter = "";
-			}
-		}
 
 		private void button3_Click(object sender, EventArgs e) // кнопка добавить расписание
 		{
@@ -74,26 +39,26 @@ namespace SportClub
 
 		private void button4_Click(object sender, EventArgs e) // редактировать расписание
 		{
-			//if (dataGridView1.SelectedRows.Count == 0)
-			//{
-			//	MessageBox.Show("Выберите занятие для редактирования", "Информация",
-			//		MessageBoxButtons.OK, MessageBoxIcon.Information);
-			//	return;
-			//}
+			if (dataGridView1.SelectedRows.Count == 0)
+			{
+				MessageBox.Show("Выберите занятие для редактирования", "Информация",
+					MessageBoxButtons.OK, MessageBoxIcon.Information);
+				return;
+			}
 
-			//DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+			DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
 
-			//// Получаем ID из столбца iDРасписанияDataGridViewTextBoxColumn
-			//int scheduleId = Convert.ToInt32(selectedRow.Cells["iDРасписанияDataGridViewTextBoxColumn"].Value);
+			// Получаем ID из столбца iDРасписанияDataGridViewTextBoxColumn
+			int scheduleId = Convert.ToInt32(selectedRow.Cells["iDРасписанияDataGridViewTextBoxColumn"].Value);
 
-			//// Форма редактирования расписания
-			//using (EditScheduleForm editForm = new EditScheduleForm(scheduleId))
-			//{
-			//	if (editForm.ShowDialog() == DialogResult.OK)
-			//	{
-			//		LoadScheduleData();
-			//	}
-			//}
+			// Форма редактирования расписания
+			using (EditScheduleForm editForm = new EditScheduleForm(scheduleId))
+			{
+				if (editForm.ShowDialog() == DialogResult.OK)
+				{
+					LoadScheduleData();
+				}
+			}
 		}
 
 		private void button6_Click(object sender, EventArgs e) // кнопка записать клиента здесь не нужна, удалено
@@ -151,7 +116,7 @@ namespace SportClub
 		{
 			try
 			{
-				string query = "DELETE FROM Расписание_тренировок WHERE ID_Раписания = @ID";
+				string query = "DELETE FROM Расписание_тренировок WHERE ID_Расписания = @ID";
 
 				using (SqlCommand cmd = new SqlCommand(query, connection))
 				{
@@ -202,9 +167,6 @@ namespace SportClub
 
 			// Настраиваем автодополнение для TextBox
 			SetupAutoComplete();
-
-			// Устанавливаем сегодняшнюю дату
-			dateTimePicker1.Value = DateTime.Today;
 
 			// Настраиваем ширину столбцов
 			AdjustColumnWidths();
@@ -281,10 +243,6 @@ namespace SportClub
 					reader.Close();
 					connection.Close();
 				}
-
-				textBox1.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-				textBox1.AutoCompleteSource = AutoCompleteSource.CustomSource;
-				textBox1.AutoCompleteCustomSource = trainerNames;
 			}
 			catch (Exception ex)
 			{
@@ -336,7 +294,6 @@ namespace SportClub
 			// При нажатии Enter применяем фильтр
 			if (e.KeyChar == (char)Keys.Enter)
 			{
-				ApplyFilters();
 				e.Handled = true;
 			}
 		}

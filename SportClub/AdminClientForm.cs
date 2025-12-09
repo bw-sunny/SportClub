@@ -140,7 +140,7 @@ namespace SportClub
 						ex.Message.Contains("активные абонементы") ||
 						ex.Message.Contains("ОШИБКА:"))
 					{
-						// Показываем сообщение от триггера как есть
+						// сообщение от триггера как есть
 						MessageBox.Show(
 							$"{ex.Message}\n\n" +
 							$"Клиент: {clientFIO}\n",
