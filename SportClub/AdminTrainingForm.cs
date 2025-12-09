@@ -30,5 +30,18 @@ namespace SportClub
 			AdminForm.Show();
             this.Close();
 		}
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form AdminEnrollsForm = new AdminEnrollsForm();
+            AdminEnrollsForm.Show();
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+			Form AdminScheduleForm = new AdminScheduleForm();
+			AdminScheduleForm.Show();
+		}
     }
 }

@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddScheduleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddScheduleForm.Designer.cs">
+      <DependentUpon>AddScheduleForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminClientForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,11 +85,23 @@
     <Compile Include="AdminClientsEditForm.Designer.cs">
       <DependentUpon>AdminClientsEditForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminEnrollsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminEnrollsForm.Designer.cs">
+      <DependentUpon>AdminEnrollsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminScheduleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminScheduleForm.Designer.cs">
+      <DependentUpon>AdminScheduleForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminSubscriptionsReturnForm.cs">
       <SubType>Form</SubType>
@@ -175,6 +193,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FitnessClubDataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FitnessClubDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FitnessClubDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FitnessClubDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FitnessClubDataSet5.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FitnessClubFullClients.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -211,6 +239,9 @@
     <Compile Include="ТrainerForm.Designer.cs">
       <DependentUpon>ТrainerForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddScheduleForm.resx">
+      <DependentUpon>AddScheduleForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminClientForm.resx">
       <DependentUpon>AdminClientForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -220,8 +251,14 @@
     <EmbeddedResource Include="AdminClientsEditForm.resx">
       <DependentUpon>AdminClientsEditForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminEnrollsForm.resx">
+      <DependentUpon>AdminEnrollsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminScheduleForm.resx">
+      <DependentUpon>AdminScheduleForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminSubscriptionsReturnForm.resx">
       <DependentUpon>AdminSubscriptionsReturnForm.cs</DependentUpon>
@@ -339,6 +376,28 @@
     </None>
     <None Include="FitnessClubDataSet3.xss">
       <DependentUpon>FitnessClubDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="FitnessClubDataSet4.xsc">
+      <DependentUpon>FitnessClubDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="FitnessClubDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FitnessClubDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FitnessClubDataSet4.xss">
+      <DependentUpon>FitnessClubDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="FitnessClubDataSet5.xsc">
+      <DependentUpon>FitnessClubDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="FitnessClubDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FitnessClubDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FitnessClubDataSet5.xss">
+      <DependentUpon>FitnessClubDataSet5.xsd</DependentUpon>
     </None>
     <None Include="FitnessClubFullClients.xsc">
       <DependentUpon>FitnessClubFullClients.xsd</DependentUpon>
