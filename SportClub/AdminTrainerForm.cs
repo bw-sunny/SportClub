@@ -561,7 +561,6 @@ namespace SportClub
 				{
 					toolStripStatusLabel1.Text = statusText;
 
-					// Цвет НЕ МЕНЯЕМ - оставляем как есть
 				}  
 			}
 			catch (Exception ex)

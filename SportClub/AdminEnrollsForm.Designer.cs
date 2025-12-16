@@ -95,7 +95,7 @@
 			this.названиетренировкиDataGridViewTextBoxColumn.MinimumWidth = 6;
 			this.названиетренировкиDataGridViewTextBoxColumn.Name = "названиетренировкиDataGridViewTextBoxColumn";
 			this.названиетренировкиDataGridViewTextBoxColumn.Width = 125;
-			// 
+			//   
 			// датавремяDataGridViewTextBoxColumn
 			// 
 			this.датавремяDataGridViewTextBoxColumn.DataPropertyName = "Дата_время";

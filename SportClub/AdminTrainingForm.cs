@@ -43,5 +43,11 @@ namespace SportClub
 			Form AdminScheduleForm = new AdminScheduleForm();
 			AdminScheduleForm.Show();
 		}
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form AdminVisitsForm = new FitnessClub.AdminVisitForm();
+            AdminVisitsForm.Show();
+		}
     }
 }

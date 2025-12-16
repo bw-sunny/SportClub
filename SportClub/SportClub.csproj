@@ -215,6 +215,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FitnessClubDataSet5.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FitnessClubDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FitnessClubDataSet6.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FitnessClubFullClients.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -244,6 +249,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>VIEW1FitnessClubDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AdminVisitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminVisitForm.Designer.cs">
+      <DependentUpon>AdminVisitForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ТrainerForm.cs">
       <SubType>Form</SubType>
@@ -325,6 +336,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminSubscriptionsSellingForm.resx">
       <DependentUpon>AdminSubscriptionsSellingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminVisitForm.resx">
+      <DependentUpon>AdminVisitForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ТrainerForm.resx">
       <DependentUpon>ТrainerForm.cs</DependentUpon>
@@ -416,6 +430,17 @@
     </None>
     <None Include="FitnessClubDataSet5.xss">
       <DependentUpon>FitnessClubDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="FitnessClubDataSet6.xsc">
+      <DependentUpon>FitnessClubDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="FitnessClubDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FitnessClubDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FitnessClubDataSet6.xss">
+      <DependentUpon>FitnessClubDataSet6.xsd</DependentUpon>
     </None>
     <None Include="FitnessClubFullClients.xsc">
       <DependentUpon>FitnessClubFullClients.xsd</DependentUpon>

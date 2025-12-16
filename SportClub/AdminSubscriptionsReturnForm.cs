@@ -290,6 +290,7 @@ namespace SportClub
 						}
 					}
 				}
+				this.Close();
 			}
 			catch (SqlException ex)
 			{
