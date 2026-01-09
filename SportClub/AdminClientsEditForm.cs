@@ -123,5 +123,10 @@ namespace SportClub
 				MessageBox.Show($"Ошибка при поиске клиента: {ex.Message}", "Ошибка");
 			}
 		}
-	}
+
+        private void textBoxId_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

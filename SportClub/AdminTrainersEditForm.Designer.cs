@@ -51,9 +51,11 @@
 			// dateTimePicker1
 			// 
 			this.dateTimePicker1.Location = new System.Drawing.Point(196, 187);
+			this.dateTimePicker1.MaxDate = new System.DateTime(2007, 1, 1, 0, 0, 0, 0);
 			this.dateTimePicker1.Name = "dateTimePicker1";
 			this.dateTimePicker1.Size = new System.Drawing.Size(210, 22);
 			this.dateTimePicker1.TabIndex = 1;
+			this.dateTimePicker1.Value = new System.DateTime(2007, 1, 1, 0, 0, 0, 0);
 			// 
 			// comboBoxQualification
 			// 
@@ -62,9 +64,9 @@
             "Стажер",
             "Сертифицированный тренер",
             "Профессиональный тренер"});
-			this.comboBoxQualification.Location = new System.Drawing.Point(196, 215);
+			this.comboBoxQualification.Location = new System.Drawing.Point(166, 215);
 			this.comboBoxQualification.Name = "comboBoxQualification";
-			this.comboBoxQualification.Size = new System.Drawing.Size(210, 24);
+			this.comboBoxQualification.Size = new System.Drawing.Size(240, 24);
 			this.comboBoxQualification.TabIndex = 2;
 			// 
 			// textBoxId
@@ -105,7 +107,7 @@
 			// label4
 			// 
 			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(74, 218);
+			this.label4.Location = new System.Drawing.Point(51, 218);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(107, 16);
 			this.label4.TabIndex = 7;

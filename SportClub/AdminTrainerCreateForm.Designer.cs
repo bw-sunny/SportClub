@@ -58,11 +58,11 @@
 			// dateTimePicker1
 			// 
 			this.dateTimePicker1.Location = new System.Drawing.Point(201, 133);
-			this.dateTimePicker1.MaxDate = new System.DateTime(2007, 12, 12, 0, 0, 0, 0);
+			this.dateTimePicker1.MaxDate = new System.DateTime(2007, 1, 1, 0, 0, 0, 0);
 			this.dateTimePicker1.Name = "dateTimePicker1";
 			this.dateTimePicker1.Size = new System.Drawing.Size(222, 22);
 			this.dateTimePicker1.TabIndex = 2;
-			this.dateTimePicker1.Value = new System.DateTime(2007, 12, 12, 0, 0, 0, 0);
+			this.dateTimePicker1.Value = new System.DateTime(2007, 1, 1, 0, 0, 0, 0);
 			this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
 			// 
 			// button1
@@ -98,7 +98,7 @@
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(84, 138);
+			this.label2.Location = new System.Drawing.Point(75, 138);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(109, 16);
 			this.label2.TabIndex = 6;

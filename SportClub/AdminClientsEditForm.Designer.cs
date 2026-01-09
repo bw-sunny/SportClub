@@ -43,19 +43,20 @@
 			// 
 			// textBoxId
 			// 
-			this.textBoxId.Location = new System.Drawing.Point(202, 39);
+			this.textBoxId.Location = new System.Drawing.Point(222, 26);
 			this.textBoxId.Name = "textBoxId";
 			this.textBoxId.Size = new System.Drawing.Size(79, 22);
 			this.textBoxId.TabIndex = 0;
+			this.textBoxId.TextChanged += new System.EventHandler(this.textBoxId_TextChanged);
 			// 
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(106, 42);
+			this.label1.Location = new System.Drawing.Point(64, 29);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(80, 16);
+			this.label1.Size = new System.Drawing.Size(142, 16);
 			this.label1.TabIndex = 1;
-			this.label1.Text = "ID клиента:";
+			this.label1.Text = "Поиск по ID клиента:";
 			this.label1.Click += new System.EventHandler(this.label1_Click);
 			// 
 			// button1
@@ -96,7 +97,7 @@
 			// dateTimePicker1
 			// 
 			this.dateTimePicker1.Location = new System.Drawing.Point(222, 200);
-			this.dateTimePicker1.MaxDate = new System.DateTime(2007, 12, 12, 0, 0, 0, 0);
+			this.dateTimePicker1.MaxDate = new System.DateTime(2007, 1, 1, 0, 0, 0, 0);
 			this.dateTimePicker1.Name = "dateTimePicker1";
 			this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
 			this.dateTimePicker1.TabIndex = 6;
@@ -131,7 +132,7 @@
 			// 
 			// buttonFind
 			// 
-			this.buttonFind.Location = new System.Drawing.Point(304, 35);
+			this.buttonFind.Location = new System.Drawing.Point(307, 22);
 			this.buttonFind.Name = "buttonFind";
 			this.buttonFind.Size = new System.Drawing.Size(118, 31);
 			this.buttonFind.TabIndex = 10;
