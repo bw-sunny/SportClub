@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddScheduleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddScheduleForm.Designer.cs">
+      <DependentUpon>AddScheduleForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminClientForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,11 +79,89 @@
     <Compile Include="AdminClientsCreateForm.Designer.cs">
       <DependentUpon>AdminClientsCreateForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminClientsEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminClientsEditForm.Designer.cs">
+      <DependentUpon>AdminClientsEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminEnrollsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminEnrollsForm.Designer.cs">
+      <DependentUpon>AdminEnrollsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminEnrollsNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminEnrollsNew.Designer.cs">
+      <DependentUpon>AdminEnrollsNew.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminScheduleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminScheduleForm.Designer.cs">
+      <DependentUpon>AdminScheduleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSubscriptionsReturnForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminSubscriptionsReturnForm.Designer.cs">
+      <DependentUpon>AdminSubscriptionsReturnForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSubscriptionsViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminSubscriptionsViewForm.Designer.cs">
+      <DependentUpon>AdminSubscriptionsViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminTrainerCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminTrainerCreateForm.Designer.cs">
+      <DependentUpon>AdminTrainerCreateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminTrainerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminTrainerForm.Designer.cs">
+      <DependentUpon>AdminTrainerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminTrainersEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminTrainersEditForm.Designer.cs">
+      <DependentUpon>AdminTrainersEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminTrainingAllForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminTrainingAllForm.Designer.cs">
+      <DependentUpon>AdminTrainingAllForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminTrainingCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminTrainingCreateForm.Designer.cs">
+      <DependentUpon>AdminTrainingCreateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminTrainingEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminTrainingEditForm.Designer.cs">
+      <DependentUpon>AdminTrainingEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminTrainingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminTrainingForm.Designer.cs">
+      <DependentUpon>AdminTrainingForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ClientForm.cs">
       <SubType>Form</SubType>
@@ -70,10 +169,61 @@
     <Compile Include="ClientForm.Designer.cs">
       <DependentUpon>ClientForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="dataGridViewTrainers.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dataGridViewTrainers.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EditScheduleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditScheduleForm.Designer.cs">
+      <DependentUpon>EditScheduleForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FitnessClubClients.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FitnessClubClients.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FitnessClubDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FitnessClubDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FitnessClubDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FitnessClubDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FitnessClubDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FitnessClubDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FitnessClubDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FitnessClubDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FitnessClubDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FitnessClubDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FitnessClubDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FitnessClubDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FitnessClubDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FitnessClubDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FitnessClubFullClients.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FitnessClubFullClients.xsd</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -83,23 +233,91 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AdminSubscriptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminSubscriptionForm.Designer.cs">
+      <DependentUpon>AdminSubscriptionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSubscriptionsSellingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminSubscriptionsSellingForm.Designer.cs">
+      <DependentUpon>AdminSubscriptionsSellingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW1FitnessClubDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VIEW1FitnessClubDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AdminVisitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminVisitForm.Designer.cs">
+      <DependentUpon>AdminVisitForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ТrainerForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ТrainerForm.Designer.cs">
       <DependentUpon>ТrainerForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddScheduleForm.resx">
+      <DependentUpon>AddScheduleForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminClientForm.resx">
       <DependentUpon>AdminClientForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminClientsCreateForm.resx">
       <DependentUpon>AdminClientsCreateForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminClientsEditForm.resx">
+      <DependentUpon>AdminClientsEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminEnrollsForm.resx">
+      <DependentUpon>AdminEnrollsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminEnrollsNew.resx">
+      <DependentUpon>AdminEnrollsNew.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminScheduleForm.resx">
+      <DependentUpon>AdminScheduleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminSubscriptionsReturnForm.resx">
+      <DependentUpon>AdminSubscriptionsReturnForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminSubscriptionsViewForm.resx">
+      <DependentUpon>AdminSubscriptionsViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminTrainerCreateForm.resx">
+      <DependentUpon>AdminTrainerCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminTrainerForm.resx">
+      <DependentUpon>AdminTrainerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminTrainersEditForm.resx">
+      <DependentUpon>AdminTrainersEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminTrainingAllForm.resx">
+      <DependentUpon>AdminTrainingAllForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminTrainingCreateForm.resx">
+      <DependentUpon>AdminTrainingCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminTrainingEditForm.resx">
+      <DependentUpon>AdminTrainingEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminTrainingForm.resx">
+      <DependentUpon>AdminTrainingForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ClientForm.resx">
       <DependentUpon>ClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditScheduleForm.resx">
+      <DependentUpon>EditScheduleForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -113,9 +331,29 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminSubscriptionForm.resx">
+      <DependentUpon>AdminSubscriptionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminSubscriptionsSellingForm.resx">
+      <DependentUpon>AdminSubscriptionsSellingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminVisitForm.resx">
+      <DependentUpon>AdminVisitForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ТrainerForm.resx">
       <DependentUpon>ТrainerForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="dataGridViewTrainers.xsc">
+      <DependentUpon>dataGridViewTrainers.xsd</DependentUpon>
+    </None>
+    <None Include="dataGridViewTrainers.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dataGridViewTrainers.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dataGridViewTrainers.xss">
+      <DependentUpon>dataGridViewTrainers.xsd</DependentUpon>
+    </None>
     <None Include="FitnessClubClients.xsc">
       <DependentUpon>FitnessClubClients.xsd</DependentUpon>
     </None>
@@ -127,6 +365,94 @@
     <None Include="FitnessClubClients.xss">
       <DependentUpon>FitnessClubClients.xsd</DependentUpon>
     </None>
+    <None Include="FitnessClubDataSet.xsc">
+      <DependentUpon>FitnessClubDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FitnessClubDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FitnessClubDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FitnessClubDataSet.xss">
+      <DependentUpon>FitnessClubDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FitnessClubDataSet1.xsc">
+      <DependentUpon>FitnessClubDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="FitnessClubDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FitnessClubDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FitnessClubDataSet1.xss">
+      <DependentUpon>FitnessClubDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="FitnessClubDataSet2.xsc">
+      <DependentUpon>FitnessClubDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="FitnessClubDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FitnessClubDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FitnessClubDataSet2.xss">
+      <DependentUpon>FitnessClubDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="FitnessClubDataSet3.xsc">
+      <DependentUpon>FitnessClubDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="FitnessClubDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FitnessClubDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FitnessClubDataSet3.xss">
+      <DependentUpon>FitnessClubDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="FitnessClubDataSet4.xsc">
+      <DependentUpon>FitnessClubDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="FitnessClubDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FitnessClubDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FitnessClubDataSet4.xss">
+      <DependentUpon>FitnessClubDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="FitnessClubDataSet5.xsc">
+      <DependentUpon>FitnessClubDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="FitnessClubDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FitnessClubDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FitnessClubDataSet5.xss">
+      <DependentUpon>FitnessClubDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="FitnessClubDataSet6.xsc">
+      <DependentUpon>FitnessClubDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="FitnessClubDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FitnessClubDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FitnessClubDataSet6.xss">
+      <DependentUpon>FitnessClubDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="FitnessClubFullClients.xsc">
+      <DependentUpon>FitnessClubFullClients.xsd</DependentUpon>
+    </None>
+    <None Include="FitnessClubFullClients.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FitnessClubFullClients.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FitnessClubFullClients.xss">
+      <DependentUpon>FitnessClubFullClients.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -136,9 +462,32 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="VIEW1FitnessClubDataSet.xsc">
+      <DependentUpon>VIEW1FitnessClubDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VIEW1FitnessClubDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VIEW1FitnessClubDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VIEW1FitnessClubDataSet.xss">
+      <DependentUpon>VIEW1FitnessClubDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

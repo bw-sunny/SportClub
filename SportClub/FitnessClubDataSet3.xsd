@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="FitnessClubDataSet3" targetNamespace="http://tempuri.org/FitnessClubDataSet3.xsd" xmlns:mstns="http://tempuri.org/FitnessClubDataSet3.xsd" xmlns="http://tempuri.org/FitnessClubDataSet3.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="FitnessClubConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="FitnessClubConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SportClub.Properties.Settings.GlobalReference.Default.FitnessClubConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Вид_Тренировки_С_ТренерамиTableAdapter" GeneratorDataComponentClassName="Вид_Тренировки_С_ТренерамиTableAdapter" Name="Вид_Тренировки_С_Тренерами" UserDataComponentName="Вид_Тренировки_С_ТренерамиTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FitnessClubConnectionString (Settings)" DbObjectName="FitnessClub.dbo.Вид_Тренировки_С_Тренерами" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID_Тренировки, Название_тренировки, Длительность, Зал, ФИО_тренера FROM dbo.Вид_Тренировки_С_Тренерами</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID_Тренировки" DataSetColumn="ID_Тренировки" />
+              <Mapping SourceColumn="Название_тренировки" DataSetColumn="Название_тренировки" />
+              <Mapping SourceColumn="Длительность" DataSetColumn="Длительность" />
+              <Mapping SourceColumn="Зал" DataSetColumn="Зал" />
+              <Mapping SourceColumn="ФИО_тренера" DataSetColumn="ФИО_тренера" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="FitnessClubDataSet3" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="FitnessClubDataSet3" msprop:Generator_DataSetName="FitnessClubDataSet3">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Вид_Тренировки_С_Тренерами" msprop:Generator_RowEvHandlerName="Вид_Тренировки_С_ТренерамиRowChangeEventHandler" msprop:Generator_RowDeletedName="Вид_Тренировки_С_ТренерамиRowDeleted" msprop:Generator_RowDeletingName="Вид_Тренировки_С_ТренерамиRowDeleting" msprop:Generator_RowEvArgName="Вид_Тренировки_С_ТренерамиRowChangeEvent" msprop:Generator_TablePropName="Вид_Тренировки_С_Тренерами" msprop:Generator_RowChangedName="Вид_Тренировки_С_ТренерамиRowChanged" msprop:Generator_RowChangingName="Вид_Тренировки_С_ТренерамиRowChanging" msprop:Generator_TableClassName="Вид_Тренировки_С_ТренерамиDataTable" msprop:Generator_RowClassName="Вид_Тренировки_С_ТренерамиRow" msprop:Generator_TableVarName="tableВид_Тренировки_С_Тренерами" msprop:Generator_UserTableName="Вид_Тренировки_С_Тренерами">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_Тренировки" msprop:Generator_ColumnPropNameInRow="ID_Тренировки" msprop:Generator_ColumnPropNameInTable="ID_ТренировкиColumn" msprop:Generator_ColumnVarNameInTable="columnID_Тренировки" msprop:Generator_UserColumnName="ID_Тренировки" type="xs:int" />
+              <xs:element name="Название_тренировки" msprop:Generator_ColumnPropNameInRow="Название_тренировки" msprop:Generator_ColumnPropNameInTable="Название_тренировкиColumn" msprop:Generator_ColumnVarNameInTable="columnНазвание_тренировки" msprop:Generator_UserColumnName="Название_тренировки">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Длительность" msprop:Generator_ColumnPropNameInRow="Длительность" msprop:Generator_ColumnPropNameInTable="ДлительностьColumn" msprop:Generator_ColumnVarNameInTable="columnДлительность" msprop:Generator_UserColumnName="Длительность" type="xs:int" minOccurs="0" />
+              <xs:element name="Зал" msprop:Generator_ColumnPropNameInRow="Зал" msprop:Generator_ColumnPropNameInTable="ЗалColumn" msprop:Generator_ColumnVarNameInTable="columnЗал" msprop:Generator_UserColumnName="Зал" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ФИО_тренера" msprop:Generator_ColumnPropNameInRow="ФИО_тренера" msprop:Generator_ColumnPropNameInTable="ФИО_тренераColumn" msprop:Generator_ColumnVarNameInTable="columnФИО_тренера" msprop:Generator_UserColumnName="ФИО_тренера">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Вид_Тренировки_С_Тренерами" />
+      <xs:field xpath="mstns:ID_Тренировки" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
